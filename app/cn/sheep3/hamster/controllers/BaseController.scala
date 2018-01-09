@@ -1,6 +1,6 @@
-package com.weidian.ds.controllers
+package cn.sheep3.hamster.controllers
 
-import com.weidian.ds.filters.{DSLog, LogUtil}
+import cn.sheep3.hamster.filters.{DSLog, LogUtil}
 import play.api.mvc.{AbstractController, ControllerComponents, RequestHeader}
 
 import scala.concurrent.ExecutionContext

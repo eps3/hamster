@@ -1,8 +1,8 @@
-package com.weidian.ds.exceptions
+package cn.sheep3.hamster.exceptions
 
 import javax.inject.Singleton
 
-import com.weidian.ds.utils.JsonUtil
+import cn.sheep3.hamster.utils.JsonUtil
 import play.api.Logger
 import play.api.http.ContentTypes._
 import play.api.http.HttpErrorHandler

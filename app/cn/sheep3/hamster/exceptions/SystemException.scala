@@ -1,4 +1,4 @@
-package com.weidian.ds.exceptions
+package cn.sheep3.hamster.exceptions
 
 /**
   * Created by admin on 2017/10/12.

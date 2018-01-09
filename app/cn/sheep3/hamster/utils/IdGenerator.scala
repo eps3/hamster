@@ -1,4 +1,4 @@
-package com.weidian.ds.utils
+package cn.sheep3.hamster.utils
 
 /**
   * Created by sheep3 on 2017/9/22.

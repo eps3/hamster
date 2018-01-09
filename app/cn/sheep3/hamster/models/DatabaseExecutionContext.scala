@@ -1,4 +1,4 @@
-package com.weidian.ds.models
+package cn.sheep3.hamster.models
 
 import javax.inject._
 

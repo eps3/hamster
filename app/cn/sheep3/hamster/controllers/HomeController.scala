@@ -1,4 +1,4 @@
-package com.weidian.ds.controllers
+package cn.sheep3.hamster.controllers
 
 import javax.inject.Inject
 

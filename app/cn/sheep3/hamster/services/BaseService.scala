@@ -1,7 +1,7 @@
-package com.weidian.ds.services
+package cn.sheep3.hamster.services
 
-import com.weidian.ds.filters.{DSLog, LogUtil}
-import com.weidian.ds.models.DatabaseExecutionContext
+import cn.sheep3.hamster.filters.{DSLog, LogUtil}
+import cn.sheep3.hamster.models.DatabaseExecutionContext
 import play.api.db.DBApi
 import play.api.mvc.RequestHeader
 

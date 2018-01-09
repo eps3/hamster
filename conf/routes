@@ -2,9 +2,9 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET           /                                        com.weidian.ds.controllers.HomeController.index
-GET           /health_check                       com.weidian.ds.controllers.HealthCheckController.index
+GET        /                    cn.sheep3.hamster.controllers.HomeController.index
+GET        /health_check        cn.sheep3.hamster.controllers.HealthCheckController.index
 
 
 # ======================== API ========================
-GET           /file/*file                              controllers.Assets.at(path="/public", file)
+GET        /file/*file          controllers.Assets.at(path="/public", file)

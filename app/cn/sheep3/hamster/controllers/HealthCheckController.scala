@@ -1,8 +1,8 @@
-package com.weidian.ds.controllers
+package cn.sheep3.hamster.controllers
 
 import javax.inject.Inject
 
-import com.weidian.ds.utils.JsonUtil
+import cn.sheep3.hamster.utils.JsonUtil
 import play.api.mvc._
 
 import scala.concurrent.Future
