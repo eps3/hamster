@@ -2,13 +2,17 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                    controllers.HomeController.index
-GET        /tags                controllers.TagController.index
-GET        /health_check        controllers.HealthCheckController.index
+GET        /                     controllers.HomeController.index
+GET        /tags                 controllers.TagController.index
+GET        /health_check         controllers.HealthCheckController.index
 
 ### admin
 GET        /admin                controllers.admin.AdminController.index
+GET        /admin/login          controllers.admin.AdminController.login
+GET        /admin/edit           controllers.admin.PostController.edit
+GET        /admin/list           controllers.admin.PostController.list
+GET        /admin/setting        controllers.admin.SetController.setting
 
 
 # ======================== API ========================
-GET        /file/*file          controllers.Assets.at(path="/public", file)
+GET        /file/*file           controllers.Assets.at(path="/public", file)

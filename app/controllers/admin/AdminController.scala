@@ -14,8 +14,15 @@ class AdminController @Inject()(cc: ControllerComponents) extends BaseController
 
 
   def index(): Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>
-    Future {
+    Future.successful{
       Ok(views.html.page.admin.index())
     }
   }
+
+  def login(): Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>
+    Future.successful{
+      Ok(views.html.page.admin.login())
+    }
+  }
+
 }

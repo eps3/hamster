@@ -1,0 +1,31 @@
+@()
+@style = {
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+}
+@script = {
+    <script src="http://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script>
+            var simplemde = new SimpleMDE({
+                autoDownloadFontAwesome: false,
+                spellChecker: false,
+                element: $("#markdown_edit")[0]
+            });
+    </script>
+}
+@common.admin.main(title = "管理平台", scripts = script, styles = style) {
+    <div id="page-wrapper">
+            <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">新增文章</h1>
+            </div>
+        </div>
+        <div class="row">
+            @*<label for="markdown_edit">新增文章</label>*@
+            <textarea class="col-lg-12" id="markdown_edit">
+
+            </textarea>
+        </div>
+    </div>
+        <!-- /#page-wrapper -->
+}
