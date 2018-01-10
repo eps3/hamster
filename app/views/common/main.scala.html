@@ -1,0 +1,103 @@
+@(title: String, scripts: Html = Html(""), styles: Html = Html(""))(content: Html)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="keyword" content="">
+        <meta name="theme-color" content="#600090">
+        <meta name="msapplication-navbutton-color" content="#600090">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+        <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+        <title>
+            羊三的博客
+        </title>
+            <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="/file/css/bootstrap.min.css">
+            <!-- Custom CSS -->
+        <link rel="stylesheet" href="/file/css/blog-style.css">
+
+            @styles
+    </head>
+    <body>
+        @content
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                        <br>
+                        <ul class="list-inline text-center">
+                            <li>
+                                <a target="_blank" href="https://www.zhihu.com/people/羊三">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">知</i>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <p class="copyright text-muted">
+                            Copyright &copy; 2017
+                            <br>
+                            <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span
+                            id="busuanzi_value_site_pv"></span> Times</span>
+                            <br>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/file/js/jquery.js"></script>
+        <script src="/file/js/bootstrap.min.js"></script>
+        <script src="/file/js/blog.js"></script>
+            <!-- async load function -->
+        <script>
+                function async(u, c) {
+                    var d = document, t = 'script',
+                            o = d.createElement(t),
+                            s = d.getElementsByTagName(t)[0];
+                    o.src = u;
+                    if (c) {
+                        o.addEventListener('load', function (e) {
+                            c(null, e);
+                        }, false);
+                    }
+                    s.parentNode.insertBefore(o, s);
+                }
+        </script>
+
+            <!-- jquery.tagcloud.js -->
+        <script>
+                // only load tagcloud.js in tag.html
+                if ($('#tag_cloud').length !== 0) {
+                    async("/file/js/jquery.tagcloud.js", function () {
+                        $.fn.tagcloud.defaults = {
+                            //size: {start: 1, end: 1, unit: 'em'},
+                            color: {start: '#bbbbee', end: '#0085a1'},
+                        };
+                        $('#tag_cloud a').tagcloud();
+                    })
+                }
+        </script>
+
+            <!--fastClick.js -->
+        <script>
+                async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+                    var $nav = document.querySelector("nav");
+                    if ($nav) FastClick.attach($nav);
+                })
+        </script>
+
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        @scripts
+    </body>
+</html>

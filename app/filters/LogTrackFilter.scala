@@ -17,13 +17,17 @@ import scala.concurrent.{ExecutionContext, Future}
 class LogTrackFilter @Inject()(implicit val mat: Materializer, ec: ExecutionContext) extends Filter {
 
   override def apply(next: (RequestHeader) => Future[Result])(request: RequestHeader): Future[Result] = {
-    val startTime = System.currentTimeMillis()
-    val trackId = IdGenerator.getId.toString
-    val newRequest = request.addAttr[String](LogUtil.LogKey, trackId)
-    LogUtil.log(newRequest).info(s"=> ${request.method} ${request.host}${request.uri}")
-    next(newRequest).map { result =>
-      LogUtil.log(newRequest).info(s"=> exec_time: ${System.currentTimeMillis() - startTime}ms")
-      result.withCookies(Cookie("logger-track-id", trackId))
+    if (request.uri.startsWith("/file/")) {
+      next(request)
+    } else {
+      val startTime = System.currentTimeMillis()
+      val trackId = IdGenerator.getId.toString
+      val newRequest = request.addAttr[String](LogUtil.LogKey, trackId)
+      LogUtil.log(newRequest).info(s"=> ${request.method} ${request.host}${request.uri}")
+      next(newRequest).map { result =>
+        LogUtil.log(newRequest).info(s"=> exec_time: ${System.currentTimeMillis() - startTime}ms")
+        result.withCookies(Cookie("logger-track-id", trackId))
+      }
     }
   }
 }

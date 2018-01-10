@@ -2,8 +2,9 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                     controllers.HomeController.index
-GET        /health_check         controllers.HealthCheckController.index
+GET        /                    controllers.HomeController.index
+GET        /tags                controllers.TagController.index
+GET        /health_check        controllers.HealthCheckController.index
 
 
 # ======================== API ========================

@@ -1,22 +1,115 @@
-@(title: String)
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>@title</title>
-        <script src="/file/js/jquery-3.2.1.min.js"></script>
-    </head>
-    <body>
-        <div>
-            <div id="health"></div>
+@(data: String = "")
+
+@styles = {
+    <link rel="stylesheet" href="/file/css/index.css"/>
+}
+@common.main(title = "羊三", styles = styles) {
+    @common.header()
+        <!-- Page Header -->
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
+        <div class="row">
+            <header class="intro-header">
+                <div class="container">
+                    <div class="site-heading text-center">
+                        <div class="about-me">
+                                <!--移动端头部显示-->
+                                <!--<img src="<%= config['sidebar-avatar'] %>"/>-->
+                            <h5><a href="/abac/">羊三</a></h5>
+                            <p>羊三描述</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
         </div>
-        <script>
-                $.ajax({
-                    url: "/health_check",
-                    success: function ( result ) {
-                        $("#health").html("<h3>health_check</h3>" + JSON.stringify(result, null, 4));
-                    }
-                });
-        </script>
-    </body>
-</html>
+    </div>
+
+        <!-- Main Content -->
+    <div class="container custom-haojen-container">
+            <!-- Post Container -->
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+                    <!-- Main Content -->
+                <div class="post-preview" style="background-image: url('/file/img/default_bg.jpg')">
+                    <a href="/">
+                        <h2 class="post-title">
+                            测试标题
+                        </h2>
+                        <p class="post-meta">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-12-29
+                        </p>
+                        测试标题自标题
+                        <h3 class="post-subtitle">
+                            子子标题
+                        </h3>
+                        <div class="post-content-preview">
+                            <p>
+                                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <hr>
+
+                <div class="post-preview" style="background-image: url('/file/img/default_bg.jpg')">
+                    <a href="/">
+                        <h2 class="post-title">
+                            测试标题a
+                        </h2>
+                        <p class="post-meta">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-12-29
+                        </p>
+                        测试标题自标题
+                        <h3 class="post-subtitle">
+                            子子标题
+                        </h3>
+                        <div class="post-content-preview">
+                            <p>
+                                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <hr>
+                <div class="post-preview "
+                style="background-image: url('/file/img/default_bg.jpg')">
+                    <a href="/">
+                        <h2 class="post-title">
+                            测试标题
+                        </h2>
+                        <p class="post-meta">
+                            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-12-29
+                        </p>
+                        测试标题自标题
+                        <h3 class="post-subtitle">
+                            子子标题
+                        </h3>
+                        <div class="post-content-preview">
+                            <p>
+                                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                                啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+                <hr>
+
+
+                    <!-- 翻页 pager -->
+
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="<%- config.root %><%- page.prev_link %>">&larr; Newer Posts</a>
+                    </li>
+                    <li class="next">
+                        <a href="<%- config.root %><%- page.next_link %>">Older Posts &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+            @common.sidebar()
+        </div>
+    </div>
+}
