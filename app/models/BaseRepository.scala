@@ -1,4 +1,4 @@
-package cn.sheep3.hamster.models
+package  models
 
 import java.sql.Connection
 

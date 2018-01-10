@@ -1,8 +1,8 @@
-package cn.sheep3.hamster.controllers
+package  controllers
 
 import javax.inject.Inject
 
-import cn.sheep3.hamster.utils.JsonUtil
+import  utils.JsonUtil
 import play.api.mvc._
 
 import scala.concurrent.Future

@@ -1,10 +1,10 @@
-package cn.sheep3.hamster.filters
+package  filters
 
 import javax.inject.Inject
 
 import akka.stream.Materializer
-import cn.sheep3.hamster.exceptions.UnknownSystemException
-import cn.sheep3.hamster.utils.IdGenerator
+import  exceptions.UnknownSystemException
+import  utils.IdGenerator
 import play.api.Logger
 import play.api.libs.typedmap.TypedKey
 import play.api.mvc.{Cookie, Filter, RequestHeader, Result}

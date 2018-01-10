@@ -1,4 +1,4 @@
-package cn.sheep3.hamster.utils
+package  utils
 
 import java.text.SimpleDateFormat
 

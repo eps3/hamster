@@ -1,4 +1,4 @@
-package cn.sheep3.hamster.utils
+package  utils
 
 import play.api.libs.json.{JsArray, JsString, JsValue, Json}
 

@@ -1,4 +1,4 @@
-package cn.sheep3.hamster.exceptions
+package  exceptions
 
 /**
   * Created by admin on 2017/10/12.

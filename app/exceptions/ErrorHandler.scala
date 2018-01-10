@@ -1,8 +1,8 @@
-package cn.sheep3.hamster.exceptions
+package exceptions
 
 import javax.inject.Singleton
 
-import cn.sheep3.hamster.utils.JsonUtil
+import utils.JsonUtil
 import play.api.Logger
 import play.api.http.ContentTypes._
 import play.api.http.HttpErrorHandler
@@ -18,9 +18,10 @@ import scala.concurrent.Future
 class ErrorHandler extends HttpErrorHandler {
   /**
     * onClientError
-    * @param request The request that caused the client error.
+    *
+    * @param request    The request that caused the client error.
     * @param statusCode The error status code. Must be greater or equal to 400, and less than 500.
-    * @param message The error message.
+    * @param message    The error message.
     * @return JsonError
     */
   override def onClientError(request: RequestHeader, statusCode: Int, message: String): Future[Result] = {
@@ -31,7 +32,8 @@ class ErrorHandler extends HttpErrorHandler {
 
   /**
     * onServerError
-    * @param request The request that triggered the server error.
+    *
+    * @param request   The request that triggered the server error.
     * @param exception The server error.
     * @return JsonError
     */

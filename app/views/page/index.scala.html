@@ -1,0 +1,22 @@
+@(title: String)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>@title</title>
+        <script src="/file/js/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <div id="health"></div>
+        </div>
+        <script>
+                $.ajax({
+                    url: "/health_check",
+                    success: function ( result ) {
+                        $("#health").html("<h3>health_check</h3>" + JSON.stringify(result, null, 4));
+                    }
+                });
+        </script>
+    </body>
+</html>

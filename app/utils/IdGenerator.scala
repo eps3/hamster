@@ -1,4 +1,4 @@
-package cn.sheep3.hamster.utils
+package  utils
 
 /**
   * Created by sheep3 on 2017/9/22.

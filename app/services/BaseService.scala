@@ -1,7 +1,7 @@
-package cn.sheep3.hamster.services
+package  services
 
-import cn.sheep3.hamster.filters.{DSLog, LogUtil}
-import cn.sheep3.hamster.models.DatabaseExecutionContext
+import  filters.{DSLog, LogUtil}
+import  models.DatabaseExecutionContext
 import play.api.db.DBApi
 import play.api.mvc.RequestHeader
 

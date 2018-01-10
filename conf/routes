@@ -2,8 +2,8 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET        /                    cn.sheep3.hamster.controllers.HomeController.index
-GET        /health_check        cn.sheep3.hamster.controllers.HealthCheckController.index
+GET        /                     controllers.HomeController.index
+GET        /health_check         controllers.HealthCheckController.index
 
 
 # ======================== API ========================

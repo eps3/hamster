@@ -1,4 +1,4 @@
-package cn.sheep3.hamster.controllers
+package  controllers
 
 import javax.inject.Inject
 
@@ -14,8 +14,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends BaseController(
 
   def index(): Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>
     Future {
-      log.info("hello boy")
-      Ok("It Works!")
+      Ok(views.html.page.index("啦啦啦"))
     }
   }
 }
