@@ -6,6 +6,9 @@ GET        /                    controllers.HomeController.index
 GET        /tags                controllers.TagController.index
 GET        /health_check        controllers.HealthCheckController.index
 
+### admin
+GET        /admin                controllers.admin.AdminController.index
+
 
 # ======================== API ========================
 GET        /file/*file          controllers.Assets.at(path="/public", file)
